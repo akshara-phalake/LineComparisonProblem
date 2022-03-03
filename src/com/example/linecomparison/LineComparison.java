@@ -26,13 +26,11 @@ public class LineComparison {
         System.out.println("Enter the value of y4 : ");
         int y4 = in.nextInt();
 
-        double dist1 = Math.sqrt( ( x2 - x1 ) * ( x2 - x1 ) + ( y2 - y1 ) * ( y2 - y1 ));
-        double dist2 = Math.sqrt( ( x4 - x3 ) * ( x4 - x3 ) + ( y4 - y3 ) * ( y4 - y3 ));
+        Double dist1 = Math.sqrt( ( x2 - x1 ) * ( x2 - x1 ) + ( y2 - y1 ) * ( y2 - y1 ));
+        Double dist2 = Math.sqrt( ( x4 - x3 ) * ( x4 - x3 ) + ( y4 - y3 ) * ( y4 - y3 ));
         System.out.println("Length of the line L1 is : "+dist1);
         System.out.println("Length of the line L2 is : "+dist2);
-
-        boolean Equality = Objects.equals(dist1, dist2);
-        if(Equality)
+        if(dist1.equals(dist2))
             System.out.println("Both lines L1 and L2 are equal.");
         else
         {
